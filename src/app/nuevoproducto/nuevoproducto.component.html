@@ -1,1 +1,41 @@
-<p>nuevoproducto works!</p>
+<div class="card mt-1 p-2 mx-auto border-info" style="width: 40rem;">
+    <div class="card-header">Nuevo Producto</div>
+    <div class="card-body">
+        <div class="row mb-2 p-2">
+            <!--columna de formulario-->
+            <div class="col">
+                <form #fr="ngForm">
+                    <div class="mb-2">
+                        <label for="nombre" class="form-label">Nombre producto:</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="nombre" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="precio" class="form-label">Precio producto:</label>
+                        <input type="text" [disabled]="!nombre" class="form-control" name="precio" id="precio" [(ngModel)]="precio" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="detalle" class="form-label">Detalle producto:</label>
+                        <textarea class="form-control" [disabled]="!precio" name="detalle" id="detalle" [(ngModel)]="detalle" required></textarea>
+                    </div>
+                    <div class="mb-2">
+                        <label for="imagen" class="form-label">Imagen del Producto:</label>
+                        <input type="file" [disabled]="!detalle" (change)="OtenerImagen($event)" class="form-control" name="imagen" id="imagen" [(ngModel)]="imagen" required>
+                    </div>
+                </form>
+            </div>
+            <!--imagen seleccionada-->
+            <div class="col" [hidden]="fr.invalid">
+                <h4>Imagen Seleccionada:</h4>
+                <hr>
+                <img [src]="ImgMostrar" alt="imagen seleccionada" width="300">
+            </div>
+        </div>
+        <div class="row p-2 mb-2">
+            <div class="col">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="button" [disabled]="fr.invalid">Agregar Producto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
