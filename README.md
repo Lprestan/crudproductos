@@ -1,4 +1,9 @@
 # Crudproductos
+App desarrollada en typescript con el framework Angular v.17 estilos css framework Bootstrap v5 y como API json-server
+permite crear listar editar y eliminar productos
+permite insertar una imagen del producto en el registro convirtiendola a base64
+se utiliza el productservice para realizar las consultas a la api
+mostrando cada componente al utilizar las rutas de angular.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
 
