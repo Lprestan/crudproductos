@@ -9,6 +9,7 @@ import { NuevoproductoComponent } from './nuevoproducto/nuevoproducto.component'
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import { ListadoproductosComponent } from './listadoproductos/listadoproductos.component';
 import { EditarproductoComponent } from './editarproducto/editarproducto.component';
+import { EliminarproductoComponent } from './eliminarproducto/eliminarproducto.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditarproductoComponent } from './editarproducto/editarproducto.compone
     NuevoproductoComponent,
     NavegacionComponent,
     ListadoproductosComponent,
-    EditarproductoComponent
+    EditarproductoComponent,
+    EliminarproductoComponent
   ],
   imports: [
     BrowserModule,

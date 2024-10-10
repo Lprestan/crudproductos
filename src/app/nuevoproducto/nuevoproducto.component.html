@@ -27,13 +27,13 @@
             <div class="col" [hidden]="fr.invalid">
                 <h4>Imagen Seleccionada:</h4>
                 <hr>
-                <img [src]="ImgMostrar" alt="imagen seleccionada" width="300">
+                <img [src]="ImgMostrar" alt="imagen seleccionada" width="300" height="300">
             </div>
         </div>
         <div class="row p-2 mb-2">
             <div class="col">
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-primary" type="button" [disabled]="fr.invalid">Agregar Producto</button>
+                    <button class="btn btn-primary" type="button" [disabled]="fr.invalid" (click)="agregarProducto()">Agregar Producto</button>
                 </div>
             </div>
         </div>

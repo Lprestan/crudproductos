@@ -1,1 +1,20 @@
-<p>listadoproductos works!</p>
+<div class="container mt-1 p-2">
+    <h4>Listado Productos</h4>
+    <hr>
+    <div class="row mb-1 row-cols-1 row-cols-md-4 g-5" >
+        <div class="col" *ngFor="let producto of Productos">
+            <div class="card border-info" style="width: 18rem; height: 25rem;">
+                <div class="card-header">{{producto.nombre}}</div>
+                <img [src]="producto.imagen" class="card-img-top mt-1 mx-auto" alt="imagen producto" style="width: 10rem; height: 10rem;" >
+                <div class="card-body">
+                    <p>Precio $: {{producto.precio}}</p>
+                    <textarea class="form-control" name="" id="" rows="3" disabled>{{producto.detalle}}</textarea>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-2">
+                        <a href="#" class="btn btn-warning me-md-2 btn-sm" [routerLink]="['/editarproducto',producto.id]" routerLinkActive="router-link-active" > <i class="bi bi-pencil-fill"></i> </a>
+                        <a href="#" class="btn btn-danger btn-sm" [routerLink]="['/eliminarproducto',producto.id]" routerLinkActive="router-link-active" ><i class="bi bi-trash-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
